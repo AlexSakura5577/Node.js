@@ -1,24 +1,24 @@
-const fs = require("fs");
+// шина сообщений:
+// const EventEmitter = require('events');
 
-fs.readFile("./test.txt", 'utf-8', (error, data) => {
+// const emitter = new EventEmitter();
 
-    fs.mkdir("./files", () => {
+// emitter.on('some_event', (args) => {
+//     const { id, text } = args
+//     console.log(id, text);
+// });
 
-        fs.writeFile("./files/test_2.txt", `${data}\nNew text!`, () => {
-            error ? console.log(error) : null;
-        });
-    });
+// emitter.emit('some_event', { id: 1, text: 'Hello, this is an event!' });
+
+
+
+// логирование:
+const Logger = require('./log');
+const logger = new Logger();
+
+logger.on('some_event', (args) => {
+  const { id, text } = args;
+  console.log(id, text);
 });
 
-setTimeout(() => {
-    if (fs.existsSync("./files/test_2.txt")) {
-        fs.unlink("./files/test_2.txt", () => { });
-    }
-}, 4000);
-setTimeout(() => {
-    if (fs.existsSync("./files")) {
-        fs.rmdir("./files", () => { });
-    }
-}, 6000);
-
-//console.log("Just test!");
+logger.log('User Logged!');
