@@ -1,24 +1,32 @@
-// шина сообщений:
-// const EventEmitter = require('events');
+const fs = require('fs');
+const zlib = require('zlib');
 
-// const emitter = new EventEmitter();
+const readStream = fs.createReadStream('./docs/text.txt');
+const writeStream = fs.createWriteStream('./docs/new-text.txt');
+const compressStream = zlib.createGzip();
 
-// emitter.on('some_event', (args) => {
-//     const { id, text } = args
-//     console.log(id, text);
+// readStream.on('data', (chunk) => {
+//     // console.log('---------');
+//     // console.log(chunk);
+//     //   console.log(chunk.toString());
+//     writeStream.write('\n ---CHUNK START--- \n');
+//     writeStream.write(chunk);
+//     writeStream.write('\n ---CHUNK END--- \n');
 // });
 
-// emitter.emit('some_event', { id: 1, text: 'Hello, this is an event!' });
+// readStream.pipe(writeStream);
+
+const handleError = () => {
+  console.log('Error');
+  readStream.destroy();
+  writeStream.end('Finished with error...');
+};
+
+readStream
+    .on('error', handleError)
+    .pipe(compressStream)
+    .pipe(writeStream)
+    .on('error', handleError);
 
 
 
-// логирование:
-const Logger = require('./log');
-const logger = new Logger();
-
-logger.on('some_event', (args) => {
-  const { id, text } = args;
-  console.log(id, text);
-});
-
-logger.log('User Logged!');
