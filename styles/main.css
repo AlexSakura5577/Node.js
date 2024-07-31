@@ -146,6 +146,7 @@ textarea {
   list-style-type: circle;
   padding-left: 20px;
   list-style-position: inside;
+  /* font-size: 25px; */
 }
 
 .error-code {
