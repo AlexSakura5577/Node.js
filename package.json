@@ -1,0 +1,30 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/AlexSakura5577/Node.js.git)"
+  },
+  "author": "YauhenKavalchuk",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "20.16.0"
+  }
+}
