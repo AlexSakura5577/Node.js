@@ -5,17 +5,21 @@
   <body>
     <%- include('./partials/nav.ejs') %>
       <h1>Contacts:</h1>
-      <ul class="contacts">
-        <% if (contacts.length) { %>
-          <% contacts.forEach(({ link, name })=> { %>
-            <li>
-              <a href="<%= link %>" target="_blank">
-                <%= name %>
-              </a>
-            </li>
-            <% }) %>
-              <% } %>
-      </ul>
+      <div class="flex">
+        <div class="flex">
+          <ul class="contacts">
+            <% if (contacts.length) { %>
+              <% contacts.forEach(({ link, name })=> { %>
+                <li>
+                  <a href="<%= link %>" target="_blank">
+                    <%= name %>
+                  </a>
+                </li>
+                <% }) %>
+                  <% } %>
+          </ul>
+        </div>
+      </div>
   </body>
 
 </html>
