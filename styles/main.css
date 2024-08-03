@@ -99,14 +99,14 @@ textarea {
   border: 1px solid #000;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
-  font-size: 18px;
+  font-size: 1rem;
   padding: 3px 5px;
   outline: none;
 }
 
 textarea {
   resize: none;
-  min-height: 150px;
+  /* min-height: 150px; */
 }
 
 .form-button {
@@ -185,7 +185,7 @@ textarea {
 }
 
 /* Медиа-запросы для мобильных устройств */
-@media only screen and (max-width: 1080px) {
+@media screen and (max-width: 768px) {
 
   *,
   *::before,
@@ -215,21 +215,17 @@ textarea {
     padding-top: 80px;
     min-height: 100vh;
     font-family: "Montserrat", sans-serif;
-    font-size: 50px;
+    font-size: 1rem;
     background: linear-gradient(to bottom, #00d2ff, #928dab);
     color: #fff;
   }
 
   nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 60px;
+    /* min-height: 60px; */
     display: flex;
     justify-content: flex-end;
     background-color: rgba(0, 0, 0, 0.7);
-    height: 120px;
+    /* height: 120px; */
   }
 
   nav ul {
@@ -241,12 +237,11 @@ textarea {
     min-height: 60px;
     display: block;
     padding: 10px 20px;
-    line-height: 120px;
-    font-size: 60px;
+    line-height: 60px;
+    font-size: 1rem;
   }
 
   .nav {
-    height: 140px;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -254,7 +249,7 @@ textarea {
 
   li {
     list-style: none;
-    font-size: 40px;
+    font-size: 1rem;
   }
 
   ul {
@@ -268,10 +263,7 @@ textarea {
     margin-bottom: 40px;
   }
 
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
+
 
   article {
     background-color: rgba(0, 0, 0, 0.4);
@@ -321,7 +313,7 @@ textarea {
   }
 
   .label {
-    font-size: 80px;
+    font-size: 1.5rem;
   }
 
   .form-info {
@@ -331,18 +323,18 @@ textarea {
 
   input,
   textarea {
-    min-height: 120px;
+    /* min-height: 20px; */
     border: 1px solid #000;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
-    font-size: 80px;
+    font-size: 1rem;
     padding: 3px 5px;
     outline: none;
   }
 
   textarea {
     resize: none;
-    min-height: 900px;
+    /* min-height: 100vh; */
   }
 
   .form-button {
@@ -358,7 +350,7 @@ textarea {
     justify-content: center;
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
-    font-size: 50px;
+    font-size: 1rem;
     background: linear-gradient(to bottom, #00d2ff, #928dab);
     color: #fff;
     padding-top: 0;
@@ -370,10 +362,9 @@ textarea {
 
   .contacts li {
     list-style-type: circle;
-    padding-left: 20px;
     list-style-position: inside;
-    margin-top: 90px;
-    font-size: 80px;
+    margin-top: 10px;
+    font-size: 1.5rem;
   }
 
   .error-code {
@@ -392,12 +383,13 @@ textarea {
     border: 1px solid #000;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
-    width: 100px;
-    height: 100px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 3px;
-    font-size: 65px;
+    font-size: 1rem;
     box-sizing: border-box;
   }
+
 
   .btn-edit,
   .btn-delete:hover {
@@ -405,22 +397,11 @@ textarea {
   }
 
   .btn-edit {
-    right: 120px;
+    right: 50px;
   }
 
   .btn-delete {
     right: 10px;
-  }
-
-  @media only screen and (max-width: 690px) {
-
-    nav a {
-      font-size: 35px;
-    }
-
-    h2 {
-      max-width: 500px;
-    }
   }
 
 }
